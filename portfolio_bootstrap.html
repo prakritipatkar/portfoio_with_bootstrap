@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="container mt-5">
+        <div class="intro">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hello! I'm Prakriti Patkar, an engineer.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="container mt-5">
+        <h2>My Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium facilis suscipit corrupti perspiciatis, quia incidunt cupiditate mollitia illo quae molestiae! In, nemo fuga? Fugit fugiat at neque, quos quis voluptatibus.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corporis quis omnis voluptate repellendus recusandae error quos facere. Eveniet doloremque vitae aliquid tempore beatae quod ipsum. Suscipit, sed nulla! Nobis.</p>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae impedit odit odio eligendi quasi fuga, quam obcaecati aut earum culpa libero itaque officia? Quaerat officia asperiores in illo voluptatum adipisci.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container mt-5">
+        <h2>Contact Me</h2>
+        <form action="your-server-side-code.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                history.pushState(null, null, this.getAttribute('href'));
+            });
+        });
+    </script>
+</body>
+</html>
